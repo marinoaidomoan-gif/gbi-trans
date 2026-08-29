@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  /* Couleurs de la charte GBI TRANS */
+  --color-navy: #0A2540;
+  --color-navy-light: #12335c;
+  --color-orange: #F5A623;
+  --color-orange-dark: #E8751A;
+  --color-offwhite: #F8F9FA;
+  --color-graytext: #2D3748;
+
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Active le mode sombre via une classe .dark sur <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-offwhite);
+  color: var(--color-graytext);
+}
+
+.dark body {
+  background-color: var(--color-navy);
+  color: var(--color-offwhite);
+}
