@@ -5,7 +5,6 @@ import { Reveal } from "../components/reveal";
 import { usePageMeta } from "../lib/seo";
 import { SERVICES } from "../lib/site";
 
-/** Carte avec inclinaison 3D douce suivant la souris. */
 function TiltCard({ children }) {
   const ref = useRef(null);
 
@@ -24,12 +23,7 @@ function TiltCard({ children }) {
   };
 
   return (
-    <div
-      ref={ref}
-      onMouseMove={onMove}
-      onMouseLeave={onLeave}
-      className="h-full transition-transform duration-200 ease-out"
-    >
+    <div ref={ref} onMouseMove={onMove} onMouseLeave={onLeave} className="tilt-card h-full">
       {children}
     </div>
   );
@@ -50,7 +44,6 @@ export default function Services() {
 
   return (
     <>
-      {/* Hero miniature */}
       <section className="bg-navy pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="mx-auto max-w-6xl px-6">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-orange">
@@ -66,7 +59,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Onglets */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal className="mb-8 flex flex-wrap gap-2.5">
@@ -88,7 +80,6 @@ export default function Services() {
 
           <Reveal key={current.slug} from="none" className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy to-navy-light">
-              {/* Placeholder en attendant de vraies photos par service */}
               <div className="flex h-[280px] w-full items-center justify-center md:h-[380px]">
                 <span className="text-6xl font-black text-orange/20">{current.title[0]}</span>
               </div>
@@ -114,7 +105,7 @@ export default function Services() {
               </ul>
               <Link
                 to="/contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-md bg-orange px-6 py-3.5 text-sm font-bold text-navy transition-transform hover:-translate-y-0.5"
+                className="btn-lift mt-8 inline-flex items-center gap-2 rounded-md bg-orange px-6 py-3.5 text-sm font-bold text-navy"
               >
                 Demander un devis pour ce service
                 <ArrowRight className="h-4 w-4" />
@@ -124,7 +115,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Grille complète avec hover 3D */}
       <section className="bg-offwhite py-16 dark:bg-navy-light md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal className="mb-12 max-w-2xl">
@@ -139,7 +129,7 @@ export default function Services() {
           <Reveal stagger className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
               <TiltCard key={s.slug}>
-                <article className="flex h-full flex-col overflow-hidden rounded-xl border border-black/5 bg-white dark:border-white/10 dark:bg-navy">
+                <article className="card-surface flex h-full flex-col overflow-hidden">
                   <div className="flex h-44 w-full items-center justify-center bg-gradient-to-br from-navy to-navy-light">
                     <span className="text-4xl font-black text-orange/20">{s.title[0]}</span>
                   </div>

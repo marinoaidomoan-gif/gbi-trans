@@ -30,13 +30,12 @@ const PILLARS = [
   {
     icon: Truck,
     title: "Transport Routier",
-    text: "Livraison porte à porte au Bénin et corridors sécurisés vers le Niger, le Nigeria et le Burkina Faso.",
+    text: "Livraison porte à porte au Bénin et corridors sécurisés vers le Nigeria et le Burkina Faso.",
   },
 ];
 
 const ADVANTAGE_ICONS = { ShieldCheck, Clock, Wallet, Headset };
 
-/** Titre animé mot par mot */
 function AnimatedHeadline() {
   const ref = useRef(null);
 
@@ -100,7 +99,6 @@ export default function Accueil() {
     <>
       {/* HERO */}
       <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-navy">
-        {/* Placeholder en attendant une vraie photo du port */}
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(245,166,35,0.15),transparent_50%)]" />
 
@@ -114,14 +112,14 @@ export default function Accueil() {
             <AnimatedHeadline />
 
             <p className="mt-6 max-w-xl text-[16.5px] leading-relaxed text-white/80 md:text-lg">
-              Fret maritime, dédouanement GUCE, transport vers le Niger, le Nigeria, le Togo et le Burkina
-              Faso. Un interlocuteur unique du départ à la livraison - et un devis détaillé sous 24h.
+              Fret maritime, dédouanement GUCE, transport vers le Nigeria et le Burkina Faso. Un
+              interlocuteur unique du départ à la livraison — et un devis détaillé sous 24h.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3.5">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-md bg-orange px-6 py-3.5 text-sm font-bold text-navy transition-transform hover:-translate-y-0.5"
+                className="btn-lift inline-flex items-center gap-2 rounded-md bg-orange px-6 py-3.5 text-sm font-bold text-navy"
               >
                 Obtenir un devis gratuit
                 <ArrowRight className="h-4 w-4" />
@@ -163,10 +161,7 @@ export default function Accueil() {
 
           <Reveal stagger className="grid gap-6 md:grid-cols-3">
             {PILLARS.map((p) => (
-              <article
-                key={p.title}
-                className="group rounded-xl border border-black/5 bg-white p-8 shadow-sm transition-shadow hover:shadow-md dark:border-white/10 dark:bg-navy-light"
-              >
+              <article key={p.title} className="card-surface group p-8">
                 <span className="mb-6 grid h-13 w-13 place-items-center rounded-lg bg-navy text-orange transition-transform duration-300 group-hover:-translate-y-1 dark:bg-orange dark:text-navy">
                   <p.icon className="h-6 w-6" strokeWidth={2.2} />
                 </span>
@@ -223,10 +218,7 @@ export default function Accueil() {
             {ADVANTAGES.map((a) => {
               const Icon = ADVANTAGE_ICONS[a.icon];
               return (
-                <div
-                  key={a.title}
-                  className="flex gap-5 rounded-xl border border-black/5 bg-white p-7 dark:border-white/10 dark:bg-navy"
-                >
+                <div key={a.title} className="card-surface flex gap-5 p-7">
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-orange/15 text-orange">
                     <Icon className="h-6 w-6" strokeWidth={2.2} />
                   </span>
@@ -264,7 +256,7 @@ export default function Accueil() {
                 <div className="mt-8 flex flex-wrap justify-center gap-3.5">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 rounded-md bg-navy px-6 py-3.5 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
+                    className="btn-lift inline-flex items-center gap-2 rounded-md bg-navy px-6 py-3.5 text-sm font-bold text-white"
                   >
                     Demander mon devis
                     <ArrowRight className="h-4 w-4" />

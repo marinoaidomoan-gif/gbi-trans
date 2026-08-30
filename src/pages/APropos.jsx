@@ -166,7 +166,7 @@ export default function APropos() {
             {CERTIFICATIONS.map((c) => (
               <div
                 key={c.title}
-                className="flex gap-5 rounded-xl border border-black/5 bg-white p-7 dark:border-white/10 dark:bg-navy-light"
+                className="card-surface flex gap-5 p-7"
               >
                 <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-navy text-orange dark:bg-orange dark:text-navy">
                   <BadgeCheck className="h-6 w-6" strokeWidth={2.2} />

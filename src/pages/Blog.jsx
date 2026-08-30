@@ -34,12 +34,8 @@ export default function Blog() {
         <div className="mx-auto max-w-6xl px-6">
           <Reveal stagger className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
             {ARTICLES.map((a) => (
-              <article
-                key={a.slug}
-                className="group flex flex-col overflow-hidden rounded-xl border border-black/5 bg-white dark:border-white/10 dark:bg-navy-light"
-              >
+              <article key={a.slug} className="card-surface group flex flex-col overflow-hidden">
                 <div className="relative flex h-48 w-full items-center justify-center overflow-hidden bg-gradient-to-br from-navy to-navy-light">
-                  {/* Placeholder en attendant une vraie image d'article */}
                   <span className="text-4xl font-black text-orange/20">{a.category[0]}</span>
                   <span className="absolute top-4 left-4 rounded bg-orange px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-navy">
                     {a.category}
@@ -75,7 +71,7 @@ export default function Blog() {
           </Reveal>
 
           <Reveal className="mt-14">
-            <div className="flex flex-col items-start justify-between gap-5 rounded-xl border border-black/5 bg-white p-8 dark:border-white/10 dark:bg-navy-light md:flex-row md:items-center">
+            <div className="card-surface flex flex-col items-start justify-between gap-5 p-8 md:flex-row md:items-center">
               <div>
                 <h2 className="mb-1.5 text-xl font-bold text-navy dark:text-white">
                   Une question sur votre dossier ?
@@ -86,7 +82,7 @@ export default function Blog() {
               </div>
               <Link
                 to="/contact"
-                className="inline-flex shrink-0 items-center gap-2 rounded-md bg-orange px-6 py-3.5 text-sm font-bold text-navy transition-transform hover:-translate-y-0.5"
+                className="btn-lift inline-flex shrink-0 items-center gap-2 rounded-md bg-orange px-6 py-3.5 text-sm font-bold text-navy"
               >
                 Nous écrire
                 <ArrowRight className="h-4 w-4" />
