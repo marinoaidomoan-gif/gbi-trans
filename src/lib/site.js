@@ -31,7 +31,7 @@ export const SERVICES = [
     slug: "transport-routier",
     title: "Transport Routier",
     short: "Corridors vers le Niger, le Nigeria et le Burkina Faso.",
-    image: "/images/svc-terrestre.jpg",
+    image: "/images/svc-terrestres.jpg",
     description:
       "Notre flotte partenaire et nos convois suivis assurent l'acheminement de vos conteneurs et vracs depuis Cotonou vers l'hinterland, ainsi que toutes les villes du Bénin.",
     bullets: [
@@ -45,7 +45,7 @@ export const SERVICES = [
     slug: "fret-maritime",
     title: "Transport Maritime",
     short: "Conteneurs 20' & 40' via le Port Autonome de Cotonou.",
-    image: "/images/svc-maritime.jpg",
+    image: "/images/svc-maritimes.jpg",
     description:
       "Nous gérons vos expéditions maritimes de bout en bout au Port Autonome de Cotonou : réservation de fret, suivi du connaissement, escorte de l'accostage jusqu'à la sortie du terminal.",
     bullets: [
@@ -73,7 +73,7 @@ export const SERVICES = [
     slug: "dedouanement-guce",
     title: "Dédouanement & GUCE",
     short: "Formalités douanières, déclarations, liaison Bénin Contrôle.",
-    image: "/images/svc-douane.jpg",
+    image: "/images/svc-douanes.jpg",
     description:
       "Commissionnaire en douane agréé, nous prenons en charge l'intégralité de vos formalités : constitution du dossier, saisie sur le Guichet Unique du Commerce Extérieur (GUCE), déclaration en détail, liaison avec Bénin Contrôle et les services de scanner.",
     bullets: [
