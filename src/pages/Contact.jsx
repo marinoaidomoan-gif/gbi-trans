@@ -4,7 +4,7 @@ import { COMPANY } from "../lib/site";
 import { usePageMeta } from "../lib/seo";
 import { Reveal } from "../components/reveal";
 
-// ⚠️ Remplace cette URL par celle que Formspree t'a donnée (https://formspree.io/f/xxxxxxxx)
+// Remplace cette URL par celle que Formspree t'a donnée (https://formspree.io/f/xxxxxxxx)
 const FORMSPREE_URL = "https://formspree.io/f/VOTRE_ID_ICI";
 
 const SUBJECTS = ["Devis", "Suivi", "Réclamation", "Autre"];
@@ -113,7 +113,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="section-divider py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1.15fr_0.85fr]">
           {/* Formulaire */}
           <Reveal from="left">

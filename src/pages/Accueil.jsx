@@ -99,8 +99,12 @@ export default function Accueil() {
     <>
       {/* HERO */}
       <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-navy">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(245,166,35,0.15),transparent_50%)]" />
+        <img
+          src="/images/hero_port_cotonou.jfif"
+          alt="Port Autonome de Cotonou"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/50" />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-28 pb-20">
           <div className="max-w-2xl">
@@ -148,7 +152,7 @@ export default function Accueil() {
       </section>
 
       {/* 3 PILIERS */}
-      <section className="py-16 md:py-24">
+      <section className="bg-offwhite py-16 dark:bg-navy section-divider md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal className="mb-12 max-w-2xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-orange">
@@ -238,7 +242,7 @@ export default function Accueil() {
       </section>
 
       {/* CTA FINAL */}
-      <section className="py-16 md:py-20">
+      <section className="section-divider py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <div

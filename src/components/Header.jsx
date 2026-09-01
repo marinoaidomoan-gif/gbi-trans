@@ -1,6 +1,6 @@
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { NAV } from "../lib/site";
 import Logo from "./Logo";
@@ -8,6 +8,18 @@ import Logo from "./Logo";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  const linkClass = ({ isActive }) =>
+    `relative text-[14px] font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-[2px] after:rounded-full after:bg-orange after:transition-all ${
+      isActive
+        ? "text-orange after:w-full"
+        : "text-white/80 after:w-0 hover:text-orange hover:after:w-full"
+    }`;
+
+  const mobileLinkClass = ({ isActive }) =>
+    `rounded-md px-3 py-3 text-[15px] font-medium transition-colors ${
+      isActive ? "bg-white/10 text-orange" : "text-white/85 hover:bg-white/5"
+    }`;
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-navy/95 backdrop-blur-sm">
@@ -19,13 +31,9 @@ export default function Header() {
         {/* Menu desktop */}
         <nav className="hidden items-center gap-8 md:flex">
           {NAV.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-[14px] font-medium text-white/80 transition-colors hover:text-orange"
-            >
+            <NavLink key={item.to} to={item.to} end={item.to === "/"} className={linkClass}>
               {item.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 
@@ -42,7 +50,7 @@ export default function Header() {
             to="/contact"
             className="rounded-md bg-orange px-5 py-2.5 text-[13.5px] font-bold text-navy transition-transform hover:-translate-y-0.5"
           >
-            Contactez-nous
+            Devis gratuit
           </Link>
         </div>
 
@@ -71,21 +79,22 @@ export default function Header() {
       {open && (
         <nav className="flex flex-col gap-1 border-t border-white/10 bg-navy px-6 py-4 md:hidden">
           {NAV.map((item) => (
-            <Link
+            <NavLink
               key={item.to}
               to={item.to}
+              end={item.to === "/"}
               onClick={() => setOpen(false)}
-              className="rounded-md px-3 py-3 text-[15px] font-medium text-white/85 hover:bg-white/5"
+              className={mobileLinkClass}
             >
               {item.label}
-            </Link>
+            </NavLink>
           ))}
           <Link
             to="/contact"
             onClick={() => setOpen(false)}
             className="mt-2 rounded-md bg-orange px-5 py-3 text-center text-[14px] font-bold text-navy"
           >
-            Contactez-nous
+            Devis gratuit
           </Link>
         </nav>
       )}

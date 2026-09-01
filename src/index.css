@@ -3,7 +3,7 @@
 @theme {
   /* Couleurs de la charte GBI TRANS */
   --color-navy: #0A2540;
-  --color-navy-light: #12335c;
+  --color-navy-light: #163d6e;
   --color-orange: #F5A623;
   --color-orange-dark: #E8751A;
   --color-offwhite: #F8F9FA;
@@ -48,5 +48,9 @@ body {
 
   .btn-lift:hover {
     transform: translateY(-2px);
+  }
+
+  .section-divider {
+    @apply border-t border-white/5;
   }
 }

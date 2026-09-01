@@ -143,7 +143,7 @@ export const ARTICLES = [
     date: "12 août 2026",
     readTime: "6 min",
     category: "Réglementation",
-    image: "/images/svc-douane.jpg",
+    image: "/images/blog/svc-douane.jpg",
   },
   {
     slug: "reduire-ses-couts-de-fret",
@@ -153,7 +153,7 @@ export const ARTICLES = [
     date: "28 juillet 2026",
     readTime: "8 min",
     category: "Optimisation",
-    image: "/images/svc-maritime.jpg",
+    image: "/images/blog/svc-maritime.jpg",
   },
   {
     slug: "transport-multimodal-afrique",
@@ -163,7 +163,7 @@ export const ARTICLES = [
     date: "9 juillet 2026",
     readTime: "7 min",
     category: "Corridors",
-    image: "/images/svc-terrestre.jpg",
+    image: "/images/blog/svc-terrestre.jpg",
   },
     {
     slug: "nouvelles-procedures-guce-2026",
@@ -176,15 +176,6 @@ export const ARTICLES = [
     image: "/images/blog/guce-2026.jpg",
   },
     {
-    slug: "documents-obligatoires-importation-benin",
-    title: "Importer au Bénin : les 4 documents qui font ou défont votre dossier",
-    excerpt:
-      "Connaissement, facture commerciale, titre d'origine, IFU : sans ces quatre pièces, votre déclaration ne peut pas être enregistrée. Le point sur l'AVD et ses délais.",
-    date: "22 juin 2026",
-    readTime: "5 min",
-    category: "Réglementation",
-    image: "/images/blog/documents-import.jpg",
-  },  {
     slug: "documents-obligatoires-importation-benin",
     title: "Importer au Bénin : les 4 documents qui font ou défont votre dossier",
     excerpt:

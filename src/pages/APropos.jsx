@@ -35,7 +35,7 @@ export default function APropos() {
       </section>
 
       {/* Histoire */}
-      <section className="py-16 md:py-24">
+      <section className="section-divider py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <Reveal from="left">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-orange">
@@ -87,9 +87,11 @@ export default function APropos() {
             <div className="relative">
               <div className="absolute -left-4 -top-4 hidden h-full w-full rounded-2xl bg-orange md:block" />
               {/* Placeholder en attendant la photo du DG */}
-              <div className="relative flex aspect-[4/5] w-full items-center justify-center rounded-2xl bg-gradient-to-br from-navy to-navy-light shadow-xl">
-                <span className="text-7xl font-black text-orange/25">DG</span>
-              </div>
+              <img
+                src="/images/dg_photo.jfif"
+                alt="Le Directeur Général de GBI TRANS"
+                className="relative aspect-[4/5] w-full rounded-2xl object-cover shadow-xl"
+              />
             </div>
           </Reveal>
 
@@ -151,7 +153,7 @@ export default function APropos() {
       </section>
 
       {/* Agréments */}
-      <section className="py-16 md:py-24">
+      <section className="section-divider py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal className="mb-12 max-w-2xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-orange">

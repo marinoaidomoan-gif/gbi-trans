@@ -70,7 +70,7 @@ export default function Faq() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="section-divider py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-6">
           <Reveal stagger className="space-y-4">
             {FAQS.map((f, i) => (

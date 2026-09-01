@@ -30,13 +30,17 @@ export default function Blog() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="section-divider py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal stagger className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
             {ARTICLES.map((a) => (
               <article key={a.slug} className="card-surface group flex flex-col overflow-hidden">
-                <div className="relative flex h-48 w-full items-center justify-center overflow-hidden bg-gradient-to-br from-navy to-navy-light">
-                  <span className="text-4xl font-black text-orange/20">{a.category[0]}</span>
+                <div className="relative h-48 w-full overflow-hidden">
+                  <img
+                    src={a.image}
+                    alt={a.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                   <span className="absolute top-4 left-4 rounded bg-orange px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-navy">
                     {a.category}
                   </span>

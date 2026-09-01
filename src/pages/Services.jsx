@@ -59,7 +59,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="section-divider py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal className="mb-8 flex flex-wrap gap-2.5">
             {SERVICES.map((s) => (
@@ -79,10 +79,12 @@ export default function Services() {
           </Reveal>
 
           <Reveal key={current.slug} from="none" className="grid gap-10 lg:grid-cols-2 lg:items-center">
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-navy to-navy-light">
-              <div className="flex h-[280px] w-full items-center justify-center md:h-[380px]">
-                <span className="text-6xl font-black text-orange/20">{current.title[0]}</span>
-              </div>
+            <div className="relative overflow-hidden rounded-2xl">
+              <img
+                src={current.image}
+                alt={current.title}
+                className="h-[280px] w-full object-cover md:h-[380px]"
+              />
             </div>
 
             <div>
@@ -130,9 +132,8 @@ export default function Services() {
             {SERVICES.map((s) => (
               <TiltCard key={s.slug}>
                 <article className="card-surface flex h-full flex-col overflow-hidden">
-                  <div className="flex h-44 w-full items-center justify-center bg-gradient-to-br from-navy to-navy-light">
-                    <span className="text-4xl font-black text-orange/20">{s.title[0]}</span>
-                  </div>
+                  <img src={s.image} alt={s.title} className="h-44 w-full object-cover" />
+
                   <div className="flex flex-1 flex-col p-7">
                     <h3 className="mb-2.5 text-lg font-bold text-navy dark:text-white">{s.title}</h3>
                     <p className="mb-5 flex-1 text-[14.5px] leading-relaxed text-graytext dark:text-white/70">
