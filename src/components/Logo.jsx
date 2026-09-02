@@ -1,73 +1,27 @@
-export default function Logo({ width = 280 }) {
+import { Truck } from "lucide-react";
+
+export default function Logo({ size = "md" }) {
+  const sizes = {
+    sm: { box: "h-9 w-9", icon: "h-5 w-5", title: "text-[15px]", tag: "text-[7px]" },
+    md: { box: "h-11 w-11", icon: "h-6 w-6", title: "text-[19px]", tag: "text-[8px]" },
+  };
+  const s = sizes[size] || sizes.md;
+
   return (
-    <svg
-      viewBox="0 0 420 140"
-      width={width}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Bloc GBI - fond noir */}
-      <rect x="0" y="0" width="230" height="140" fill="#1a1a1a" />
-      {/* Bloc TRANS - fond jaune, léger décalage pour créer une séparation nette */}
-      <rect x="234" y="0" width="186" height="140" fill="#FFC700" />
-
-      {/* Texte GBI - centré verticalement dans son bloc */}
-      <text
-        x="20"
-        y="72"
-        dominantBaseline="middle"
-        fontFamily="Montserrat, Arial, sans-serif"
-        fontWeight="900"
-        fontSize="50"
-        fill="#FFC700"
-        letterSpacing="2"
-      >
-        GB
-      </text>
-
-      <text
-        x="145"
-        y="72"
-        dominantBaseline="middle"
-        fontFamily="Montserrat, Arial, sans-serif"
-        fontWeight="900"
-        fontSize="50"
-        fill="#FFC700"
-      >
-        I
-      </text>
-      {/* Chevron repositionné au-dessus du I, mieux aligné et proportionné */}
-      <polygon
-        points="147,22 163,32 147,42 152,32"
-        fill="#FFC700"
-      />
-
-      {/* Texte TRANS - centré dans son bloc jaune */}
-      <text
-        x="247"
-        y="72"
-        dominantBaseline="middle"
-        fontFamily="Montserrat, Arial, sans-serif"
-        fontWeight="900"
-        fontSize="36"
-        fill="#1a1a1a"
-        letterSpacing="1"
-      >
-        TRANS
-      </text>
-
-      {/* Tagline - alignée sous GBI, avec plus d'air par rapport au texte principal */}
-      <text
-        x="20"
-        y="108"
-        fontFamily="Poppins, Arial, sans-serif"
-        fontWeight="500"
-        fontSize="11"
-        letterSpacing="1.2"
-        fill="#FFC700"
-        opacity="0.85"
-      >
-        TRANSIT · LOGISTIQUE · INTERNATIONAL
-      </text>
-    </svg>
+    <div className="inline-flex w-fit items-center gap-3 whitespace-nowrap">
+      <span className={`grid ${s.box} shrink-0 place-items-center rounded-xl bg-orange`}>
+        <Truck className={`${s.icon} text-navy`} strokeWidth={2.4} />
+      </span>
+      <div className="flex flex-col leading-none">
+        <span className={`${s.title} font-extrabold tracking-tight text-white`}>
+          GBI TRANS
+        </span>
+        <span
+          className={`mt-1 ${s.tag} block w-full overflow-hidden font-semibold tracking-[0.1em] text-orange`}
+        >
+          TRANSIT & LOGISTIQUE
+        </span>
+      </div>
+    </div>
   );
 }
