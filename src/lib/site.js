@@ -218,4 +218,16 @@ export const FAQS = [
     q: "Comment obtenir un devis et en combien de temps ?",
     a: "Remplissez le formulaire de la page Devis en indiquant la nature de la marchandise, le volume ou le poids, l'origine et la destination. Nous revenons vers vous sous 24 heures ouvrées.",
   },
+    {
+    q: "Qu'est-ce que le régime de transit douanier ?",
+    a: "C'est le régime qui permet à une marchandise de traverser le territoire béninois sous contrôle douanier, en suspension des droits et taxes, sans être dédouanée pour le marché local. C'est le cas typique d'un conteneur qui arrive au Port de Cotonou pour repartir vers le Niger ou le Burkina Faso : les droits ne sont pas payés au Bénin, mais à destination finale.",
+  },
+  {
+    q: "Combien de temps ma marchandise peut-elle rester en transit avant des frais supplémentaires ?",
+    a: "Le délai varie selon la destination. Pour les marchandises à destination du Niger ou du Burkina Faso, pays ayant un accord de coopération commerciale avec le Bénin, le délai de franchise est de 30 jours. Pour d'autres destinations sans un tel accord, il est de 15 jours. Passé ce délai, des frais de magasinage peuvent s'appliquer.",
+  },
+  {
+    q: "Le suivi de ma marchandise en transit est-il sécurisé ?",
+    a: "Oui. Le Bénin utilise le système SIGMAT, qui interconnecte électroniquement les douanes de plusieurs pays de la sous-région pour suivre précisément les marchandises en transit d'un État à un autre, réduisant les risques de fraude ou de perte d'information entre les postes-frontières.",
+  },
 ];
