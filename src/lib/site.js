@@ -195,6 +195,26 @@ export const ARTICLES = [
     category: "Corridors",
     image: "/images/blog/corridor-sahel.jpg",
   },
+    {
+    slug: "incoterms-guide-importateur-benin",
+    title: "Incoterms : lequel choisir pour vos importations au Bénin ?",
+    excerpt:
+      "EXW, FOB, CIF, DDP... chaque Incoterm change qui paie le transport, l'assurance et le dédouanement. Le guide pour choisir la bonne règle selon votre niveau d'expérience à l'import.",
+    date: "2 septembre 2026",
+    readTime: "7 min",
+    category: "Conseils",
+    image: "/images/blog/svc-maritime.jpg",
+  },
+  {
+    slug: "assurance-ad-valorem-proteger-marchandise",
+    title: "Assurance ad valorem : protéger réellement la valeur de votre marchandise",
+    excerpt:
+      "En cas d'avarie ou de perte, la responsabilité légale du transporteur est plafonnée et souvent bien inférieure à la valeur réelle de votre cargaison. L'assurance ad valorem comble cet écart.",
+    date: "20 août 2026",
+    readTime: "6 min",
+    category: "Conseils",
+    image: "/images/svc-entrepot.jpg",
+  },
 ];
 
 export const FAQS = [
